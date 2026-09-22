@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Умная копилка</title>
+    <link rel="stylesheet" href="exhibit-ui.css?v=20260913-1830" />
+    <link rel="stylesheet" href="museum-v2.css?v=20260913-1830" />
+  </head>
+  <body>
+    <main class="app" aria-label="Интерактив Умная копилка">
+      <section class="topbar">
+        <div>
+          <p class="kicker">Финансовая привычка</p>
+          <h1 id="screenTitle">Умная копилка</h1>
+        </div>
+        <div class="scoreboard" aria-live="polite">
+          <span>Бюджет</span>
+          <strong id="budgetLabel">100 ₽</strong>
+        </div>
+      </section>
+
+      <section class="workspace" id="workspace">
+        <section class="story-panel">
+          <div class="seal" aria-hidden="true">10</div>
+          <p id="storyText"></p>
+          <div class="tip-box" id="tipBox"></div>
+        </section>
+
+        <section class="play-area">
+          <div class="coin-tray" id="coinTray" aria-label="Монетки"></div>
+          <div class="banks" id="banks" aria-label="Копилки"></div>
+          <section class="choice-stage" id="choiceStage" hidden>
+            <div class="choice-grid" id="choiceGrid"></div>
+          </section>
+        </section>
+      </section>
+
+      <section class="bottom-controls" aria-label="Управление">
+        <button class="secondary" id="backButton">Назад</button>
+        <button class="primary" id="mainButton">Готово</button>
+      </section>
+
+      <section class="summary-screen" id="summaryScreen" hidden>
+        <section class="summary-card" id="summaryCard">
+          <p class="summary-eyebrow">Твой финансовый итог</p>
+          <h2 id="summaryTitle">100 рублей распределены с умом</h2>
+          <div class="summary-lines" id="summaryLines"></div>
+          <p class="summary-note" id="summaryNote">
+            Ты научился главному: деньги можно тратить с умом, копить на мечту и помогать другим.
+          </p>
+          <div class="summary-actions">
+            <button class="primary" id="restartButton">Начать заново</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="message-panel" id="messagePanel" aria-live="assertive" hidden>
+        <div class="message-card">
+          <p class="message-eyebrow" id="messageEyebrow"></p>
+          <h2 id="messageTitle"></h2>
+          <p id="messageText"></p>
+          <button id="messageButton">Понятно</button>
+        </div>
+      </section>
+
+      <section class="start-panel" id="startPanel" aria-live="polite">
+        <div class="start-content">
+          <p class="start-kicker">Первые деньги</p>
+          <h2>Умная копилка</h2>
+          <p>
+            Распредели 100 рублей между тратами, мечтой и добрым делом: перетаскивай монетки в копилки
+            или нажимай сначала на монетку, а потом на нужную копилку.
+          </p>
+          <button id="startButton">Старт</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="exhibit-ui.js?v=20260913-1830"></script>
+    <script src="script.js?v=20260913-1830"></script>
+  </body>
+</html>
